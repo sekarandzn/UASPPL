@@ -3,8 +3,6 @@ from selenium import webdriver
 from selenium.webdriver.common.by import By
 
 class XSSDetectionTestCase(unittest.TestCase):
-
-    @classmethod
     def setUpClass(cls):
         option = webdriver.FirefoxOptions()
         option.add_argument('--headless')
