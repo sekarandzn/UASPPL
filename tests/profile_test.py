@@ -3,8 +3,6 @@ from selenium import webdriver
 from selenium.webdriver.common.by import By
 
 class ProfilePictureUploadTestCase(unittest.TestCase):
-
-    @classmethod
     def setUpClass(cls):
         option = webdriver.FirefoxOptions()
         option.add_argument('--headless')
@@ -12,7 +10,7 @@ class ProfilePictureUploadTestCase(unittest.TestCase):
         try:
             cls.url = os.environ['URL']
         except:
-            cls.url = "http://localhost"
+            cls.url = "http://localhost/badcrud-main"
 
     def test(self):
         self.login_correct_credentials()
