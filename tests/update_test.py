@@ -8,8 +8,6 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
 
 class UpdateContactTestCase(unittest.TestCase):
-
-    @classmethod
     def setUpClass(cls):
         option = webdriver.FirefoxOptions()
         option.add_argument('--headless')
@@ -17,7 +15,7 @@ class UpdateContactTestCase(unittest.TestCase):
         try:
             cls.url = os.environ['URL']
         except:
-            cls.url = "http://localhost"
+            cls.url = "http://localhost/badcrud-main"
         cls.name_query = ''.join(random.choices(string.ascii_letters, k=10))
 
     def test(self):
@@ -40,8 +38,8 @@ class UpdateContactTestCase(unittest.TestCase):
 
         self.browser.find_element(By.ID, 'name').send_keys(self.name_query)
         self.browser.find_element(By.ID, 'email').send_keys('test@example.com')
-        self.browser.find_element(By.ID, 'phone').send_keys('1234567890')
-        self.browser.find_element(By.ID, 'title').send_keys('Developer')
+        self.browser.find_element(By.ID, 'phone').send_keys('6282299159')
+        self.browser.find_element(By.ID, 'title').send_keys('Collector')
 
         self.browser.find_element(By.CSS_SELECTOR, 'input[type="submit"]').click()
 
