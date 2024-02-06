@@ -10,7 +10,7 @@ class XSSDetectionTestCase(unittest.TestCase):
         try:
             cls.url = os.environ['URL']
         except:
-            cls.url = "http://localhost"
+            cls.url = "http://localhost/badcrud-main"
             
     def test(self):
         self.login_correct_credentials()
